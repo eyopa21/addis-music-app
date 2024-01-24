@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  # mongodb database
+  db:
+    image: mongo:latest
+    restart: always
+    ports:
+      - '27017:27017'
+    volumes:
+      - mailsniplet_db_data:/data/db
+
+  
+
+  
+volumes:
+  mailsniplet_db_data: {}
