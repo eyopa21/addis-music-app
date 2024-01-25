@@ -22,3 +22,4 @@ export { default as AlertError } from "./AlertError";
 
 export { default as MusicPlayer } from "./MusicPlayer";
 export { default as Contact } from "./Contact";
+export { default as Footer } from "./Footer";

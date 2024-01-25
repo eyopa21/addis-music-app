@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "./Header";
 import { useStateValue } from "../Context/StateProvider";
+import Footer from "./Footer";
 const UserProfile = () => {
 const [{ user }, dispatch] = useStateValue();
 return (
@@ -52,7 +53,8 @@ return (
       </div>
    
     </div>
-  </div>
+    </div>
+    <Footer/>
 </div>
 );
 };

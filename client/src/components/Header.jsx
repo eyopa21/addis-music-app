@@ -61,7 +61,7 @@ return (
 
         <nav className={isOpen ? ("flex") : (" hidden md:flex")}>
             <ul
-                className="flex bg-violet-200 py-4 mt-6 absolute md:relative flex-col md:flex-row w-full shadow md:shadow-none text-center top-12 left-0 md:top-0 md:flex">
+                className="flex bg-violet-200 md:bg-gray-100 z-50 py-4 mt-6 md:mt-0 absolute md:relative flex-col md:flex-row w-full shadow md:shadow-none text-center top-12 left-0 md:top-0 md:flex">
                 {listItems}</ul>
 
         </nav>
@@ -82,9 +82,9 @@ return (
 
             {isMenu && (
             <motion.div initial={{ opacity: 0, y: 50 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: 50 }}
-                className="absolute z-10 top-12 right-0 w-275 p-4 gap-4 bg-card shadow-lg rounded-lg backdrop-blur-sm flex flex-col">
+                className="absolute mt-2 z-10 top-12 right-0 w-275 p-4 gap-4 bg-card shadow-lg rounded-lg backdrop-blur-sm flex flex-col">
                 <NavLink to={"/userProfile"}> <p
-                    className="text-base text-textColor hover:font-semibold duration-150 transition-all ease-in-out">
+                    className="text-base text-textColor hover:font-semibold hover:text-violet-600 duration-150 transition-all ease-in-out">
                     Profile
                     </p>
                 </NavLink>
@@ -93,14 +93,14 @@ return (
                 {user?.user.role === "admin" && (
                 <>
                     <NavLink to={"/dashboard/home"}> <p
-                        className="text-base text-textColor hover:font-semibold duration-150 transition-all ease-in-out">
+                        className="text-base text-textColor hover:font-semibold hover:text-violet-600 duration-150 transition-all ease-in-out">
                         Dashboard
                         </p>
                     </NavLink>
                     <hr />
                 </>
                 )}
-                <p className="text-base text-textColor hover:font-semibold duration-150 transition-all ease-in-out"
+                <p className="text-base text-textColor hover:font-semibold hover:text-red-600 duration-150 transition-all ease-in-out"
                     onClick={logout}>
                     Sign out
                 </p>

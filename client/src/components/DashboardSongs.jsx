@@ -95,7 +95,7 @@ const DashboardSongs = () => {
 
 export const SongContainer = ({ data }) => {
   return (
-    <div className=" w-full  grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5   items-center justify-evenly">
+    <div className=" w-full  grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-y-4  items-center justify-evenly">
       {data &&
         data.map((song, i) => (
           <SongCard key={song._id} data={song} index={i} />

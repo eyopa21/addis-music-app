@@ -1,7 +1,7 @@
 import React from "react";
 import { IoHome } from "react-icons/io5";
 import { NavLink, Route, Routes } from "react-router-dom";
-import { DashboardNewSong } from ".";
+import { DashboardNewSong, Footer } from ".";
 import { isActiveStyles, isNotActiveStyles } from "../utils/styles";
 import DashboardAlbum from "./DashboardAlbum";
 import DashboardArtist from "./DashboardArtist";
@@ -41,6 +41,8 @@ const Dashboard = () => {
           <Route path="/newSong" element={<DashboardNewSong />} />
         </Routes>
       </div>
+
+      <Footer/>
     </div>
   );
 };

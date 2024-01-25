@@ -7,6 +7,7 @@ import Filter from "./Filter";
 import Header from "./Header";
 import SearchBar from "./SearchBar";
 import { motion } from "framer-motion";
+import Footer from "./Footer";
 
 const Home = () => {
   const [
@@ -107,9 +108,11 @@ const Home = () => {
 
       <Filter setFilteredSongs={setFilteredSongs} />
 
-      <div className="w-full h-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 lg:p-4">
+      <div className="w-full h-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-y-4 lg:p-4">
         <HomeSongContainer musics={filteredSongs ? filteredSongs : allSongs} />
       </div>
+
+      <Footer/>
     </div>
   );
 };
@@ -140,7 +143,7 @@ export const HomeSongContainer = ({ musics }) => {
           initial={{ opacity: 0, translateX: -50 }}
           animate={{ opacity: 1, translateX: 0 }}
           transition={{ duration: 0.3, delay: index * 0.1 }}
-          className="relative w-40 min-w-210 px-2 py-4 cursor-pointer hover:shadow-xl hover:bg-card bg-gray-100 shadow-md rounded-lg flex flex-col items-center"
+          className="relative  w-40 min-w-210 px-2 py-4 cursor-pointer hover:shadow-xl hover:bg-card bg-gray-100 shadow-md rounded-lg flex flex-col items-center"
           onClick={() => addSongToContext(index)}
         >
           <div className="w-40 min-w-[160px] h-40 min-h-[160px] rounded-lg drop-shadow-lg relative overflow-hidden">

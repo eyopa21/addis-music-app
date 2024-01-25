@@ -17,7 +17,7 @@ const DashboardAlbum = () => {
   }, []);
   return (
     <div className="w-full lg:p-4 flex items-center justify-center flex-col">
-      <div className="relative w-full gap-3  my-4 p-4 py-12 border border-gray-300 rounded-md grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5">
+      <div className="relative w-full gap-3  my-4 p-4 py-12 border border-gray-300 rounded-md grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-y-4 ">
         {allAlbums &&
           allAlbums.map((data, index) => (
            
