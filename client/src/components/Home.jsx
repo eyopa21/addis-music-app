@@ -107,7 +107,7 @@ const Home = () => {
 
       <Filter setFilteredSongs={setFilteredSongs} />
 
-      <div className="w-full h-auto flex items-center justify-evenly gap-4 flex-wrap p-4">
+      <div className="w-full h-auto grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 lg:p-4">
         <HomeSongContainer musics={filteredSongs ? filteredSongs : allSongs} />
       </div>
     </div>

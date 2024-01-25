@@ -24,7 +24,7 @@ to: '/contact'
 
 ];
 
-const Header = () => {
+const Navbar = () => {
 const navigate = useNavigate();
 const [{ user }, dispatch] = useStateValue();
 const [isOpen, setIsOpen] = useState(false);
@@ -61,7 +61,7 @@ return (
 
         <nav className={isOpen ? ("flex") : (" hidden md:flex")}>
             <ul
-                className="flex bg-violet-200 py-4 mt-6 absolute md:relative flex-col md:flex-row w-full shadow md:shadow-none text-center top-12 left-0 md:top-0 md:flex">
+                className="flex bg-white absolute md:relative flex-col md:flex-row w-full shadow md:shadow-none text-center top-12 left-0 md:top-0 md:flex">
                 {listItems}</ul>
 
         </nav>
@@ -127,4 +127,4 @@ return (
 );
 };
 
-export default Header;
+export default Navbar;

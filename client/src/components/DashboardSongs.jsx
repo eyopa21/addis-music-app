@@ -42,7 +42,7 @@ const DashboardSongs = () => {
   }, [songFilter]);
 
   return (
-    <div className="w-full p-4 flex items-center justify-center flex-col">
+    <div className="w-full lg:p-4 flex items-center justify-center flex-col">
       <div className="w-full flex justify-center items-center gap-24">
         <NavLink
           to={"/dashboard/newSong"}
@@ -77,7 +77,7 @@ const DashboardSongs = () => {
         )}
       </div>
 
-      <div className="relative w-full  my-4 p-4 py-12 border border-gray-300 rounded-md">
+      <div className="relative w-full  my-4 lg:p-4 py-12 border border-gray-300 rounded-md">
         <div className="absolute top-4 left-4">
           <p className="text-xl font-bold">
             <span className="text-sm font-semibold text-textColor">
@@ -95,7 +95,7 @@ const DashboardSongs = () => {
 
 export const SongContainer = ({ data }) => {
   return (
-    <div className=" w-full  flex flex-wrap gap-3  items-center justify-evenly">
+    <div className=" w-full  grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5   items-center justify-evenly">
       {data &&
         data.map((song, i) => (
           <SongCard key={song._id} data={song} index={i} />

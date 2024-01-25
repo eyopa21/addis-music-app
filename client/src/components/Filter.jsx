@@ -39,10 +39,10 @@ const Filter = ({ setFilteredSongs }) => {
     dispatch({ type: actionType.SET_FILTER_TERM, filterTerm: null });
   };
   return (
-    <div className="w-full my-4 px-6 py-4 flex items-center justify-start md:justify-center gap-10">
+    <div className="w-full my-4 px-2 lg:px-6 py-4 flex flex-wrap items-center justify-start md:justify-center gap-2 md:gap-4 lg:gap-10">
       <FilterButtons filterData={artists} flag={"Artist"} />
 
-      <div className=" flex items-center gap-6 mx-4">
+      <div className="hidden lg:flex  items-center gap-6 mx-4">
         {filters?.map((data) => (
           <p
             key={data.id}
@@ -55,19 +55,20 @@ const Filter = ({ setFilteredSongs }) => {
           </p>
         ))}
       </div>
-
+    <FilterButtons filterData={filters} flag={"Category"} className="block lg:hidden"/>
       <FilterButtons filterData={allAlbums} flag={"Albums"} />
 
       <FilterButtons filterData={filterByLanguage} flag={"Language"} />
-
-      <motion.i
-        initial={{ opacity: 0 }}
-        animate={{ opacity: 1 }}
-        whileTap={{ scale: 0.75 }}
-        onClick={clearAllFilter}
-      >
-        <MdClearAll className="text-textColor text-xl cursor-pointer" />
-      </motion.i>
+      {/*
+        <motion.i
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          whileTap={{ scale: 0.75 }}
+          onClick={clearAllFilter}
+        >
+          Clear filter<MdClearAll className="text-textColor text-xl cursor-pointer" />
+        </motion.i>
+      */}
     </div>
   );
 };

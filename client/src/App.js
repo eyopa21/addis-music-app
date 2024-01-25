@@ -74,7 +74,7 @@ function App() {
 
   return (
     <AnimatePresence>
-      <div className="h-auto flex items-center justify-center min-w-[680px]">
+      <div className="min-h-screen flex items-center justify-center min-w-screen">
         {isLoading ||
           (!user && (
             <div className="fixed inset-0 bg-loaderOverlay backdrop-blur-sm ">
@@ -94,7 +94,7 @@ function App() {
             initial={{ opacity: 0, y: 50 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: 50 }}
-            className={`fixed min-w-[700px] h-26  inset-x-0 bottom-0  bg-cardOverlay drop-shadow-2xl backdrop-blur-md flex items-center justify-center`}
+            className={`fixed w-screen h-26  inset-x-0 bottom-0  bg-cardOverlay drop-shadow-2xl backdrop-blur-md flex items-center justify-center`}
           >
             <MusicPlayer />
           </motion.div>

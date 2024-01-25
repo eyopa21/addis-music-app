@@ -15,7 +15,7 @@ const Dashboard = () => {
     <div className="w-full h-auto flex flex-col items-center justify-center bg-primary">
       <Header />
 
-      <div className="w-[60%] my-2 p-4 flex items-center justify-evenly">
+      <div className="w-full my-2 p-4 flex flex-row justify-start space-x-4 items-center ">
         
         <NavLink to={"/dashboard/home"}><IoHome className="text-2xl text-textColor" /></NavLink>
         

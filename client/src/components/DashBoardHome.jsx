@@ -57,7 +57,7 @@ const DashBoardHome = () => {
     }
   }, []);
   return (
-    <div className="w-full p-6 flex items-center justify-evenly flex-wrap">
+    <div className="w-full p-4 flex items-center justify-evenly flex-wrap">
       {/* prettier-ignore */}
       <DashboardCard icon={<FaUsers className="text-3xl text-textColor" />} name={"Users"} count={allUsers?.length > 0 ? allUsers?.length : 0} />
 

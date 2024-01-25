@@ -73,7 +73,7 @@ const Contact = () => {
                         </path>
                     </g>
                 </svg>
-                <span className="text-sm">+93 749 99 65 50</span>
+                <span className="text-sm">+251918784596</span>
             </div>
             <div className="flex items-center mt-5">
                 <svg className="h-6 mr-2 text-indigo-600" fill="currentColor" version="1.1" id="Capa_1"
